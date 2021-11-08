@@ -27,21 +27,6 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-// function Book(title, author, pages, read) {
-//   this.title = title;
-//   this.author = author;
-//   this.pages = pages;
-//   this.read = read ? "Finished" : "Unfinished";
-//   this.isDisplayed = false;
-//   this.id = getRandomInt(1000);
-// }
-
-// Book.prototype.info = function () {
-//   return `${this.title} by ${this.author}, ${this.pages} pages, ${
-//     this.read ? "Finished" : "Unfinished"
-//   }`;
-// };
-
 function showLibrary() {
   const table = document.getElementById("table");
 
