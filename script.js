@@ -1,3 +1,20 @@
+class Book {
+  isDisplayed = false;
+  id = getRandomInt(1000);
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read ? "Finished" : "Unfinished";
+  }
+
+  info() {
+    return `${this.title} by ${this.author}, ${this.pages} pages, ${
+      this.read ? "Finished" : "Unfinished"
+    }`;
+  }
+}
+
 let myLibrary = [
   new Book("Pinocchio", "Carlo Collodi", 95, true),
   new Book("Don Quixote", "Miguel de Cervantes", 324, true),
@@ -10,20 +27,20 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read ? "Finished" : "Unfinished";
-  this.isDisplayed = false;
-  this.id = getRandomInt(1000);
-}
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read ? "Finished" : "Unfinished";
+//   this.isDisplayed = false;
+//   this.id = getRandomInt(1000);
+// }
 
-Book.prototype.info = function () {
-  return `${this.title} by ${this.author}, ${this.pages} pages, ${
-    this.read ? "Finished" : "Unfinished"
-  }`;
-};
+// Book.prototype.info = function () {
+//   return `${this.title} by ${this.author}, ${this.pages} pages, ${
+//     this.read ? "Finished" : "Unfinished"
+//   }`;
+// };
 
 function showLibrary() {
   const table = document.getElementById("table");
